@@ -12,20 +12,20 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     protected function sendResponse($result, $message)
-{
-    return response()->json([
-        'success' => true,
-        'data'    => $result,
-        'message' => $message,
-    ], 200);
-}
+    {
+        return response()->json([
+            'success' => true,
+            'data'    => $result,
+            'message' => $message,
+        ], 200);
+    }
 
-protected function sendError($error, $errorMessages = [], $code = 404)
-{
-    return response()->json([
-        'success' => false,
-        'message' => $error,
-        'data'    => $errorMessages,
-    ], $code);
-}
+    protected function sendError($error, $errorMessages = [], $code = 404)
+    {
+        return response()->json([
+            'success' => false,
+            'message' => $error,
+            'data'    => $errorMessages,
+        ], $code);
+    }
 }
