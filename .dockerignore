@@ -1,0 +1,30 @@
+# Node dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Laravel vendor directory
+/vendor
+composer.lock
+composer.phar
+
+# Environment files
+.env
+.env.*  # ignore .env.testing, .env.production, etc
+
+# IDEs and editors
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Docker-related (optional)
+docker-compose.override.yml

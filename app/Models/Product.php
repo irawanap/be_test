@@ -9,11 +9,11 @@ class Product extends Model
 {
     use HasFactory;
 
-        /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    /**
+    * The attributes that are mass assignable.
+    *
+    * @var array
+    */
     protected $fillable = [
         'name_product',
         'code_product',
@@ -21,4 +21,14 @@ class Product extends Model
         'unit',
         'description',
     ];
+
+
+    
+    public function locations()
+{
+    return $this->belongsToMany(Location::class, 'product_location')
+                ->using(ProductLocation::class)
+                ->withPivot('stok')
+                ->withTimestamps();
+}
 }
