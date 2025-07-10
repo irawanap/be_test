@@ -27,4 +27,6 @@ Thumbs.db
 .gitignore
 
 # Docker-related (optional)
-docker-compose.override.yml
+.env
+*.yaml
+!compose.yaml
